@@ -2,13 +2,13 @@ from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
 
 
-from api import test
+from api import open_research
 
-from api.test import router
+
 app = FastAPI()
 
 app.include_router(
-    test.router,
+    open_research.router,
     prefix="/api/genai",
     tags=["Fetch Supplier alternatives, pros, cons and G2 ratings"],
 )
